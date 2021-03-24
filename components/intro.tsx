@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 const intro: JSX.Element = 
   <div className="intro">
-    <p style={{fontSize: "24px"}}>Hi there.</p>
+    <h1 style={{fontSize: "28px"}}>Hi there.</h1>
     <p>
       I'm <span style={{color: "#F6E183"}}>Cole</span>. I write code, 
       mainly <span style={{color: "#D18DF0"}}>JavaScript </span> 

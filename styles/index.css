@@ -19,8 +19,7 @@
 }
 .bench {
   border-radius: 15px;
-  /* border: 1px solid red !important; */
-  box-shadow: 5px 5px 5px #001221 !important;
+  box-shadow: 5px 5px 5px #001221;
 }
 
 .intro {
@@ -29,6 +28,7 @@
   padding-left: 20px;
   padding-right: 20px;
   text-align: left;
+  font-size: 18px;
 }
 
 .linksContainer {

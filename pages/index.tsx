@@ -1,4 +1,4 @@
-
+import Meta from '../components/Meta'
 import mainImage from '../components/mainImage'
 import intro from '../components/intro'
 import links from '../components/links'
@@ -8,6 +8,7 @@ import { sous, la } from '../components/secret'
 export default function Home() {
   return (
     <div style={{marginTop: "50px"}}>
+    <Meta />
     <div className="itemContainer">
       <div >
         {mainImage}

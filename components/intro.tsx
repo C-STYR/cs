@@ -9,7 +9,7 @@ const intro: JSX.Element =
       and <span style={{color: "#BDE666"}}>Python</span>, for web applications.
     </p>
     <p>
-      I work at <a href="https://reactime.io/" style={{color: "#FF555D"}}>Reactime.io</a>. 
+      I'm a software engineer at <a href="https://goteleport.com" style={{color: "#FF555D"}}>Teleport</a>. 
       You can see samples of code I've written <a href="https://github.com/open-source-labs/reactime/blob/master/src/app/components/ComponentMap.tsx" 
       target="_blank" rel="noopener noreferrer">here</a>,   
       <a href="https://github.com/open-source-labs/reactime/blob/master/src/app/components/WebMetrics.tsx" 

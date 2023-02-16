@@ -11,6 +11,7 @@ export const boxStyles = style({
   height: 100,
   width: 100,
   marginBottom: 5,
+  borderRadius: '6px',
   color: theme.color,
 });
 

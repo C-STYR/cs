@@ -1,48 +1,65 @@
-import { link, p, pinkWords, section } from "../styles/about.css";
+import { useState } from "react";
+import { btn, link, body, p, pinkWords, section } from "../styles/about.css";
 import Link from "next/link";
+import ContactBox from "../components/ContactBox";
 
 export default function About() {
+  const [showEmail, setShowEmail] = useState(false);
+
+  function handleClick() {
+    setShowEmail(true);
+    setTimeout(() => {
+      setShowEmail(false);
+    }, 9000);
+  }
+
   return (
-    <section className={section}>
-      <h1>Hello</h1>
-      <div className={p}>
-        <p>
-          I ocassionally post to this{" "}
-          <Link href="/blog" className={link}>
-            web log
-          </Link>
-          , usually on topics that don't have a great presence on the interwebs
-          already, and almost exclusively on software engineering.
-        </p>
-        <p>
-          If you're interested in{" "}
-          <span className={pinkWords}>wooden boat building</span>, you can find
-          some pictures{" "}
-          <Link
-            className={link}
-            href="https://flickr.com/photos/colestyron/albums/"
-          >
-            here
-          </Link>
-          .
-        </p>
-        <p>
-          This site was built with <span className={pinkWords}>Next.js</span>{" "}
-          and <span className={pinkWords}>vanilla-extract CSS</span>. The source
-          code can be found{" "}
-          <Link className={link} href="https://github.com/c-styr/cs">
-            here
-          </Link>
-          .
-        </p>
-        <p>
-          If you'd like to hire me, you can find a copy of my resume{" "}
-          <Link className={link} href="">
-            here
-          </Link>
-          . It's <i>probably</i> not the most recent version.
-        </p>
-      </div>
-    </section>
+    <>
+      <section className={section}>
+        <h1 className={p}>Hello</h1>
+        <div className={body}>
+          <p className={p}>
+            I'm Cole, a software engineer and wooden boat builder.
+          </p>
+          <p className={p}>
+            I ocassionally post to this{" "}
+            <Link href="/blog" className={link}>
+              web log
+            </Link>
+            , usually on topics that don't have a great presence on the
+            interwebs already, and almost exclusively on software engineering.
+          </p>
+          <p className={p}>
+            If you're interested in{" "}
+            <span className={pinkWords}>wooden boat building</span>, you can
+            find some pictures{" "}
+            <Link
+              className={link}
+              href="https://flickr.com/photos/colestyron/albums/"
+            >
+              here
+            </Link>
+            .
+          </p>
+          <p className={p}>
+            This site was built with <span className={pinkWords}>Next.js</span>{" "}
+            and <span className={pinkWords}>vanilla-extract CSS</span>. The
+            source code can be found{" "}
+            <Link className={link} href="https://github.com/c-styr/cs">
+              here
+            </Link>
+            .
+          </p>
+          <p className={p}>
+            If you'd like to contact me, click{" "}
+            <button type="button" className={btn} onClick={handleClick}>
+              here
+            </button>
+            .
+          </p>
+        </div>
+      </section>
+      {showEmail && <ContactBox />}
+    </>
   );
 }

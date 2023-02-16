@@ -1,26 +1,69 @@
-import { style } from "@vanilla-extract/css"
-import theme from "../styles/theme"
+import { keyframes, style } from "@vanilla-extract/css";
+import theme from "../styles/theme";
 
 export const paletteContainer = style({
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 20,
-    color: 'white',
-    alignItems: 'center'
-})
+  display: "flex",
+  flexDirection: "column",
+  margin: 20,
+  color: "white",
+  alignItems: "center",
+});
 
 export const mainNav = style({
-    display: 'flex',
-    marginLeft: 60,
-    marginTop: 20,
-})
+  display: "flex",
+  marginLeft: 60,
+  marginTop: 20,
+  "@media": {
+    "screen and (max-width: 768px)": {
+      marginLeft: 20,
+    },
+
+    "screen and (min-width: 1440px)": {
+      marginLeft: "calc(20% - 10px)",
+      marginTop: 60,
+    },
+  },
+});
 
 export const navItem = style({
-    margin: 10,
-})
+  margin: 10,
+});
 
 export const navLink = style({
-    color: theme.palePink,
-    fontSize: 22,
-    textDecoration: 'none'
-})
+  color: theme.palePink,
+  fontSize: 22,
+  textDecoration: "none",
+});
+
+export const shell = style({
+  width: "100%",
+  height: 200,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+export const fadeIn = keyframes({
+  "0%": { opacity: 0 },
+  "20%": { opacity: 1 },
+  "60%": { opacity: 1 },
+  "80%": { opacity: 0 },
+  "100%": { opacity: 0 },
+});
+
+export const fadeOut = keyframes({
+  "0%": { opacity: 1 },
+  "100%": { opacity: 0 },
+});
+
+export const emailChunk = style({
+  display: "flex",
+  fontSize: 36,
+  width: 300,
+  color: theme.paleAqua,
+  justifyContent: "center",
+  animationName: fadeIn,
+  animationDuration: '9200ms',
+  animationIterationCount: 1,
+  animationTimingFunction: 'linear'
+});

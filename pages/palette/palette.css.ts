@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import theme from "./theme";
+import theme from "../../styles/theme";
 
 export const container = style({
   display: "flex",
@@ -11,7 +11,7 @@ export const boxStyles = style({
   height: 100,
   width: 100,
   marginBottom: 5,
-  borderRadius: '6px',
+  borderRadius: "6px",
   color: theme.color,
 });
 

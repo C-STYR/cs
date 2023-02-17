@@ -4,6 +4,8 @@ const {
   const withVanillaExtract = createVanillaExtractPlugin();
   
   /** @type {import('next').NextConfig} */
-  const nextConfig = {};
+  const nextConfig = {
+    pageExtensions: ['page.tsx']
+  };
   
   module.exports = withVanillaExtract(nextConfig);

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { btn, link, body, p, pinkWords, section } from "../styles/about.css";
+import { btn, link, body, p, pinkWords, section } from "./about.css";
 import Link from "next/link";
-import ContactBox from "../components/ContactBox";
+import ContactBox from "../../components/ContactBox";
 
 export default function About() {
   const [showEmail, setShowEmail] = useState(false);

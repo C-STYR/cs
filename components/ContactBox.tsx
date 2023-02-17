@@ -1,4 +1,4 @@
-import { emailChunk, shell } from "./componentStyles.css";
+import { emailChunk, shell } from "./styles.css";
 export default function ContactBox() {
   const domain = "gmail.com";
   const at = "@";

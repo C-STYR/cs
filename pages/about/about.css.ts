@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import theme from "./theme";
+import theme from "../../styles/theme";
 
 export const section = style({
   marginLeft: 70,
@@ -18,12 +18,12 @@ export const section = style({
 });
 
 export const p = style({
-    marginBottom: 30,
+  marginBottom: 30,
 });
 
 export const body = style({
   fontSize: 20,
-  fontWeight: "lighter"
+  fontWeight: "lighter",
 });
 
 export const link = style({
@@ -33,14 +33,14 @@ export const link = style({
 });
 
 export const btn = style([
-    link,
-    {
-        backgroundColor: theme.bg,
-        border: 'none',
-        fontSize: 20,
-        padding: 0
-    }
-])
+  link,
+  {
+    backgroundColor: theme.bg,
+    border: "none",
+    fontSize: 20,
+    padding: 0,
+  },
+]);
 
 export const pinkWords = style({
   color: theme.pink,

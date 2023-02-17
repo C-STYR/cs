@@ -1,5 +1,11 @@
-import PaletteBox from "../components/PaletteBox";
-import { palePink, pinkBox, container, yellowBox, aquaBox } from "../styles/palette.css";
+import PaletteBox from "../../components/PaletteBox";
+import {
+  palePink,
+  pinkBox,
+  container,
+  yellowBox,
+  aquaBox,
+} from "./palette.css";
 
 export default function Palette() {
   return (

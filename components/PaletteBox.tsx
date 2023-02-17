@@ -1,6 +1,6 @@
 import { CS } from "../types";
 import Box from "./Box";
-import { paletteContainer } from "./componentStyles.css";
+import { paletteContainer } from "./styles.css";
 
 const PaletteBox: CS = ({ name, ...props }) => (
   <div className={paletteContainer}>

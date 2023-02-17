@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLink, navItem, mainNav } from "./componentStyles.css";
+import { navLink, navItem, mainNav } from "./styles.css";
 export default function Navbar() {
   return (
     <>
@@ -18,7 +18,9 @@ interface NavLinkProps {
 function NavLink({ href, dest }: NavLinkProps) {
   return (
     <div className={navItem}>
-      <Link className={navLink} href={href}>{dest}</Link>
+      <Link className={navLink} href={href}>
+        {dest}
+      </Link>
     </div>
   );
 }

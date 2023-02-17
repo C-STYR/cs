@@ -1,4 +1,3 @@
-// import { vendors } from "environment/settings";
 import Script from "next/script";
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;

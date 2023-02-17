@@ -1,11 +1,15 @@
-import Layout from "../components/Layout";
 import "../styles/app.css";
+import Layout from "../components/Layout";
+import { Analytics } from "../web/Analytics";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Analytics />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 

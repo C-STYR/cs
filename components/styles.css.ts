@@ -71,11 +71,17 @@ export const emailChunk = style({
 export const outer = style({
   display: 'flex',
   justifyContent: 'center',
-  width: '100%'
+  width: '100%',
 })
 
 export const inner = style({
   maxWidth: 1240,
-  fontSize: 20,
-  width: '100%'
+  paddingRight: 20,
+  paddingLeft: 20,
+  marginLeft: 20
+})
+
+export const artContainer = style({
+  fontSize: 11,
+  lineHeight: 'normal'
 })

@@ -63,25 +63,21 @@ export const emailChunk = style({
   color: theme.paleAqua,
   justifyContent: "center",
   animationName: fadeIn,
-  animationDuration: '9200ms',
+  animationDuration: "9200ms",
   animationIterationCount: 1,
-  animationTimingFunction: 'linear'
+  animationTimingFunction: "linear",
 });
 
 export const outer = style({
-  display: 'flex',
-  justifyContent: 'center',
-  width: '100%',
-})
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+});
 
 export const inner = style({
   maxWidth: 1240,
-  paddingRight: 20,
-  paddingLeft: 20,
-  marginLeft: 20
-})
+});
 
 export const artContainer = style({
-  fontSize: 11,
-  lineHeight: 'normal'
-})
+  fontSize: 12,
+});

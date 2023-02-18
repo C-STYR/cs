@@ -67,3 +67,15 @@ export const emailChunk = style({
   animationIterationCount: 1,
   animationTimingFunction: 'linear'
 });
+
+export const outer = style({
+  display: 'flex',
+  justifyContent: 'center',
+  width: '100%'
+})
+
+export const inner = style({
+  maxWidth: 1240,
+  fontSize: 20,
+  width: '100%'
+})

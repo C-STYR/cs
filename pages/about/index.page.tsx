@@ -26,8 +26,7 @@ export default function About() {
             <Link href="/blog" className={link}>
               web log
             </Link>
-            , usually on topics that don't have a great presence on the
-            interwebs already, and almost exclusively on software engineering.
+            {" "}on challenges I've encountered in software engineering - and how I solved them.
           </p>
           <p className={p}>
             If you're interested in{" "}

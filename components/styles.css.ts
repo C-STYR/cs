@@ -51,9 +51,9 @@ export const fadeIn = keyframes({
   "100%": { opacity: 0 },
 });
 
-export const fadeOut = keyframes({
-  "0%": { opacity: 1 },
-  "100%": { opacity: 0 },
+export const slowFadeIn = keyframes({
+  "0%": { opacity: 0 },
+  "100%": { opacity: 1 },
 });
 
 export const emailChunk = style({
@@ -79,5 +79,10 @@ export const inner = style({
 });
 
 export const artContainer = style({
-  fontSize: 12,
+  fontSize: 10,
+  // animationName: slowFadeIn,
+  // opacity: 0,
+  // animationDuration: '60s',
+  // animationDelay: '5s',
 });
+

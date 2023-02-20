@@ -1,10 +1,8 @@
 import ArtContainer from "../components/ArtContainer";
-import { Tree } from "../components/ascii-art/Tree";
-import { Chair } from "../components/ascii-art/Chair";
-import { BlownAway } from "../components/ascii-art/BlownAway";
+import { DragonFly } from "../components/ascii-art/DragonFly";
 
 export default function Home() {
   return (
-    <ArtContainer art={Tree}/>
+    <ArtContainer art={DragonFly}/>
   );
 }

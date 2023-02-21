@@ -80,9 +80,9 @@ export const inner = style({
 
 export const artContainer = style({
   fontSize: 10,
-  // animationName: slowFadeIn,
-  // opacity: 0,
-  // animationDuration: '60s',
-  // animationDelay: '5s',
+  animationName: slowFadeIn,
+  opacity: 0,
+  animationDuration: '60s',
+  animationDelay: '5s',
 });
 

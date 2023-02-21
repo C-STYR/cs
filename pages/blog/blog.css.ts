@@ -14,3 +14,11 @@ export const linkBase = style({
     fontSize: 20,
     marginBottom: 30,
 })
+
+export const blogWrapper = style({
+    marginLeft: 70,
+})
+
+export const blogH1 = style({
+    color: theme.pink
+})

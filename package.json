@@ -8,10 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@portabletext/react": "^2.0.1",
+    "@portabletext/types": "^2.0.2",
     "@vanilla-extract/css": "^1.9.5",
     "next": "^13.1.6",
+    "next-sanity": "^4.1.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-refractor": "^2.1.7"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",

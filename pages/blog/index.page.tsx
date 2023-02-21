@@ -1,11 +1,25 @@
 import Link from "next/link";
+import { getAllBlogIndexablePosts } from "../../lib/sanity/queries/blogQueries";
+import { fetchData } from "../../lib/sanity/utils";
 import { blogBase, linkBase } from "./blog.css"
 
-export default function Blog() {
+export default function Blog({ results }) {
   return (
     <div className={ blogBase }>
-      <Link className={linkBase} href="/blog/example1">1</Link>
-      <Link className={linkBase} href="/blog/example2">2</Link>
+      {results.map(post => {
+        let slug = "/blog/" + post.slug
+        return <Link className={ linkBase } href={slug}>{post.title}</Link>
+      })}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const results = await fetchData(getAllBlogIndexablePosts);
+
+  console.log("results:", results)
+
+  return {
+    props: { results }
+  }
 }

@@ -6,6 +6,7 @@ const theme = {
   palePink: '#FFDAE0',
   aqua: '#77FFFF',
   paleAqua: '#A0FFFF',
+  codeBG: '#2B3442'
 }
 
 

@@ -9,7 +9,7 @@ export default function Blog({ results }) {
       {results.map((post) => {
         let slug = "/blog/" + post.slug;
         return (
-          <Link className={linkBase} href={slug}>
+          <Link key={post.slug} className={linkBase} href={slug}>
             {post.title}
           </Link>
         );

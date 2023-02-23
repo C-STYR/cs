@@ -18,7 +18,7 @@
 /tmp
 /out-tsc
 /cs-blog
-json-expander.page.tsx
+/pages/blog/json-expander*
 
 # misc
 .DS_Store

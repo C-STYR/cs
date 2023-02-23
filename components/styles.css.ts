@@ -1,13 +1,6 @@
 import { keyframes, style } from "@vanilla-extract/css";
 import theme from "../styles/theme";
 
-export const paletteContainer = style({
-  display: "flex",
-  flexDirection: "column",
-  margin: 20,
-  color: "white",
-  alignItems: "center",
-});
 
 export const mainNav = style({
   display: "flex",

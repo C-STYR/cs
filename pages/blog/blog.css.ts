@@ -17,7 +17,7 @@ export const blogBase = style({
 });
 
 export const linkBase = style({
-  color: theme.yellow,
+  color: theme.paleYellow,
   textDecoration: "none",
   fontSize: 20,
   marginBottom: 30,

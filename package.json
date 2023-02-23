@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.30.4",
     "@portabletext/react": "^2.0.1",
     "@portabletext/types": "^2.0.2",
     "@vanilla-extract/css": "^1.9.5",

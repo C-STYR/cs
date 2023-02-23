@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "../test/json-expander.page.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -17,7 +17,7 @@
 /dist
 /tmp
 /out-tsc
-sanity.cli.ts
+/cs-blog
 
 # misc
 .DS_Store

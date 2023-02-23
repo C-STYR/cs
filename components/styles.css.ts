@@ -1,7 +1,6 @@
 import { keyframes, style } from "@vanilla-extract/css";
 import theme from "../styles/theme";
 
-
 export const mainNav = style({
   display: "flex",
   marginLeft: 60,
@@ -72,10 +71,18 @@ export const inner = style({
 });
 
 export const artContainer = style({
+  maxWidth: 380,
   fontSize: 10,
   animationName: slowFadeIn,
   opacity: 0,
-  animationDuration: '80s',
-  animationIterationCount: 'infinite',
+  animationDuration: "80s",
+  animationIterationCount: "infinite",
 });
 
+export const artOuter = style({
+  "@media": {
+    "screen and (max-width: 768px)": {
+      maxWidth: 110,
+    },
+  },
+});

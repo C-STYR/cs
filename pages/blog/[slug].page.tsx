@@ -7,6 +7,7 @@ import BlogWrapper from "./BlogWrapper";
 import { portableTextMap } from "../../components/portableTextComponents/portableTextMap";
 import { PortableText } from "@portabletext/react";
 import { TypedObject } from "@portabletext/types";
+import { blogH1 } from "./blog.css";
 
 interface BlogProps {
   title: string;
@@ -16,7 +17,7 @@ interface BlogProps {
 export default function BlogPage({ title, body }: BlogProps) {
   return (
     <BlogWrapper>
-      <h1>{title}</h1>
+      <h1 className={blogH1}>{title}</h1>
       <PortableText value={body} components={portableTextMap} />
     </BlogWrapper>
   );
@@ -44,12 +45,11 @@ export async function getStaticProps({ params }) {
 
   const article = await fetchData(articleBySlugQuery, { slug: pageSlug });
 
-  const { title, description, body } = article;
+  const { title, body } = article;
 
   return {
     props: {
       title,
-      description,
       body,
     },
   };

@@ -9,10 +9,6 @@ export const blogQuery = `
 }
 `
 
-export const getAll = `
-*[]
-`
-
 export const getAllBlogIndexablePosts = `
 *[_type == "blogArticle" && indexable ] {
     title, 
@@ -23,7 +19,5 @@ export const getAllBlogIndexablePosts = `
 export const articleBySlugQuery = `
   *[_type == "blogArticle" && slug.current == $slug][0] { 
     title, 
-    "slug": slug.current,
-    description,
     body
 }`;

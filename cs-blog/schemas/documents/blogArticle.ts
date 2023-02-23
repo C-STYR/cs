@@ -26,8 +26,16 @@ export default {
       title: 'Indexable',
       name: 'indexable',
       type: 'boolean',
-      description: 'toggle on/off prevent being indexed on /blog',
+      description: 'toggle on/off to prevent being indexed on /blog',
       initialValue: true,
+    },
+    {
+      title: 'Date Published',
+      name: 'publishedDate',
+      type: 'datetime',
+      options: {
+        auto: true, //does this work?
+      },
     },
     {
       title: 'Body',
@@ -36,8 +44,7 @@ export default {
       of: [
         {type: 'block'},
         {type: 'image'},
-        {type: 'code'}
-        // {name: 'code', title: 'Code Block', type: 'code', options: {withFilename: true}},
+        {name: 'code', title: 'Code Block', type: 'code', options: {withFilename: true}},
       ],
     },
   ],

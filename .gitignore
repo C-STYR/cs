@@ -14,10 +14,16 @@
 
 # production
 /build
+/dist
+/tmp
+/out-tsc
+/cs-blog
+/pages/blog/json-expander*
 
 # misc
 .DS_Store
 *.pem
+/scratchpad
 
 # debug
 npm-debug.log*

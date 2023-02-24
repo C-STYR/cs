@@ -28,3 +28,8 @@ export const codeBlockOuter = style({
     },
   }
 });
+
+export const link = style({
+  color: theme.aqua,
+  textDecoration: "none",
+})

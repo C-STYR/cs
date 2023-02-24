@@ -1,6 +1,6 @@
 import { PortableTextComponents } from "@portabletext/react";
 import CodeBlock from "./CodeBlock";
-import { CodeSpan, H1, H2, H3, H4} from "./portableTextComponents";
+import { CodeSpan, H1, H2, H3, H4, NextLink} from "./portableTextComponents";
 /*=========================================================
  Reference here: https://github.com/portabletext/react-portabletext#customizing-components
  Mapping a component automatically passes it a props object, which can be destructured to 
@@ -37,6 +37,9 @@ export const portableTextMap: PortableTextComponents = {
   marks: {
     code: ({ children }) => {
         return <CodeSpan>{children[0]}</CodeSpan>
+    },
+    link: ({ children, value}) => {
+      return <NextLink children={children} value={value}/>
     }
   }
 };

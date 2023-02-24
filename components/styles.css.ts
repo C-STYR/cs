@@ -3,22 +3,27 @@ import theme from "../styles/theme";
 
 export const mainNav = style({
   display: "flex",
+  justifyContent: "flex-start",
   marginLeft: 60,
   marginTop: 20,
   "@media": {
     "screen and (max-width: 768px)": {
-      marginLeft: 20,
+      marginLeft: 30,
     },
 
     "screen and (min-width: 1440px)": {
-      marginLeft: "calc(20% - 10px)",
       marginTop: 60,
     },
   },
 });
 
+export const navContainer = style({
+  display: "flex",
+});
+
 export const navItem = style({
-  margin: 10,
+  marginRight: 20,
+  marginTop: 10,
 });
 
 export const navLink = style({
@@ -60,29 +65,28 @@ export const emailChunk = style({
   animationTimingFunction: "linear",
 });
 
-export const outer = style({
+export const centratorOuter = style({
   display: "flex",
   justifyContent: "center",
   width: "100%",
 });
 
-export const inner = style({
+export const centratorInner = style({
   maxWidth: 1240,
-});
+  width: "100%",
 
-export const artContainer = style({
-  maxWidth: 380,
-  fontSize: 10,
-  animationName: slowFadeIn,
-  opacity: 0,
-  animationDuration: "80s",
-  animationIterationCount: "infinite",
-});
-
-export const artOuter = style({
   "@media": {
-    "screen and (max-width: 768px)": {
-      maxWidth: 110,
+    "screen and (min-width: 1440px)": {
+      width: 1240,
     },
   },
 });
+
+export const artContainer = style({
+  fontSize: 10,
+  animationName: slowFadeIn,
+  opacity: 0,
+  animationDuration: "30s",
+  animationIterationCount: "infinite",
+});
+

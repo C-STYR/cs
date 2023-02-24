@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { navLink, navItem, mainNav } from "./styles.css";
+import { navLink, navItem, mainNav, navContainer } from "./styles.css";
 export default function Navbar() {
   return (
-    <>
+    <div className={navContainer}>
       <div className={mainNav}>
         <NavLink href="/" dest="home" />
         <NavLink href="/blog" dest="blog" />
         <NavLink href="/about" dest="about" />
       </div>
-    </>
+    </div>
   );
 }
 interface NavLinkProps {

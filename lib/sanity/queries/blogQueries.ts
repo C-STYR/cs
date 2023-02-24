@@ -10,7 +10,7 @@ export const blogQuery = `
 `
 
 export const getAllBlogIndexablePosts = `
-*[_type == "blogArticle" && indexable ] {
+*[_type == "blogArticle" && indexable ] | order(publishedDate desc){
     title, 
     "slug": slug.current,
 }

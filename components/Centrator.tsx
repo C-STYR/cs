@@ -1,8 +1,8 @@
-import { outer, inner } from "./styles.css";
+import { centratorOuter, centratorInner } from "./styles.css";
 export default function Centrator({ children }) {
   return (
-    <div className={outer}>
-      <div className={inner}>{children}</div>
+    <div className={centratorOuter}>
+      <div className={centratorInner}>{children}</div>
     </div>
   );
 }

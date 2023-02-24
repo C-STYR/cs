@@ -19,6 +19,7 @@
 /out-tsc
 /cs-blog
 /pages/blog/json-expander*
+/pages/sanity-poc*
 
 # misc
 .DS_Store

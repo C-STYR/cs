@@ -2,6 +2,7 @@ import { useState } from "react";
 import { btn, link, body, p, pinkWords, section } from "./about.css";
 import Link from "next/link";
 import ContactBox from "../../components/ContactBox";
+import Centrator from "../../components/Centrator";
 
 export default function About() {
   const [showEmail, setShowEmail] = useState(false);
@@ -14,7 +15,7 @@ export default function About() {
   }
 
   return (
-    <>
+    <Centrator>
       <section className={section}>
         <h1 className={p}>Hello</h1>
         <div className={body}>
@@ -25,8 +26,9 @@ export default function About() {
             I ocassionally post to this{" "}
             <Link href="/blog" className={link}>
               web log
-            </Link>
-            {" "}on challenges I've encountered in software engineering - and how I solved them.
+            </Link>{" "}
+            on challenges I've encountered in software engineering - and how I
+            solved them.
           </p>
           <p className={p}>
             If you're interested in{" "}
@@ -59,6 +61,6 @@ export default function About() {
         </div>
       </section>
       {showEmail && <ContactBox />}
-    </>
+    </Centrator>
   );
 }

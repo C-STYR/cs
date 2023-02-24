@@ -4,7 +4,7 @@ import theme from "../../styles/theme";
 export const blogBase = style({
   display: "flex",
   flexDirection: "column",
-  margin: 100,
+  margin: 60,
   color: "white",
   "@media": {
     "screen and (max-width: 768px)": {
@@ -17,14 +17,14 @@ export const blogBase = style({
 });
 
 export const linkBase = style({
-  color: theme.paleYellow,
+  color: theme.color,
   textDecoration: "none",
   fontSize: 20,
   marginBottom: 30,
 });
 
 export const blogWrapper = style({
-  marginLeft: 70,
+  marginLeft: 60,
   marginBottom: 100,
   maxWidth: "60%",
   lineHeight: 1.5,
@@ -32,6 +32,10 @@ export const blogWrapper = style({
   color: theme.paleGrey,
 
   "@media": {
+    "screen and (min-width: 1440px)": {
+      maxWidth: "85%",
+    },
+
     "screen and (max-width: 768px)": {
       maxWidth: "100%",
       marginLeft: 30,

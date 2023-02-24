@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 import theme from "../../styles/theme";
 
 export const section = style({
-  marginLeft: 70,
+  marginLeft: 60,
   marginRight: 30,
   marginTop: 60,
   maxWidth: 900,
@@ -12,7 +12,7 @@ export const section = style({
     },
 
     "screen and (min-width: 1440px)": {
-      marginLeft: "20%",
+      // marginLeft: "20%",
     },
   },
 });

@@ -20,9 +20,12 @@ const headers = {
 };
 
 async function getCurrentFile(): Promise<{ sha: string; content: string }> {
+  console.log(`Fetching current file: ${API_BASE}?ref=${BRANCH}`);
   const res = await fetch(`${API_BASE}?ref=${BRANCH}`, { headers });
+  console.log(`GET ${res.status} ${res.statusText}`);
   if (!res.ok) throw new Error(`Failed to get file: ${res.status} ${await res.text()}`);
   const data = await res.json();
+  console.log(`Current file SHA: ${data.sha}`);
   return {
     sha: data.sha,
     content: Buffer.from(data.content, "base64").toString("utf-8"),
@@ -43,15 +46,18 @@ async function pushCommit(sha: string, commitNumber: number): Promise<string> {
     committer: COMMIT_AUTHOR,
   });
 
+  console.log(`Pushing commit ${commitNumber} with SHA: ${sha}`);
   const res = await fetch(API_BASE, { method: "PUT", headers, body });
+  console.log(`PUT ${res.status} ${res.statusText}`);
   if (!res.ok) throw new Error(`Failed to push commit ${commitNumber}: ${res.status} ${await res.text()}`);
 
   const data = await res.json();
-  // Return the new SHA for the next commit in the chain
+  console.log(`Commit ${commitNumber} SHA: ${data.content.sha}`);
   return data.content.sha;
 }
 
 export default async function handler(_req: Request) {
+  console.log(`GITHUB_TOKEN present: ${!!process.env.GITHUB_TOKEN}`);
   const commitCount = Math.floor(Math.random() * 4) + 5; // 5–8
   console.log(`Starting green_graph run: ${commitCount} commits`);
 

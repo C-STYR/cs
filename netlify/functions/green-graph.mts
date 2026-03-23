@@ -51,7 +51,7 @@ async function pushCommit(sha: string, commitNumber: number): Promise<string> {
   return data.content.sha;
 }
 
-export default async function handler() {
+export default async function handler(_req: Request) {
   const commitCount = Math.floor(Math.random() * 4) + 5; // 5–8
   console.log(`Starting green_graph run: ${commitCount} commits`);
 

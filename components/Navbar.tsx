@@ -5,8 +5,6 @@ export default function Navbar() {
     <div className={navContainer}>
       <div className={mainNav}>
         <NavLink href="/" dest="home" />
-        <NavLink href="/blog" dest="blog" />
-        <NavLink href="/about" dest="about" />
       </div>
     </div>
   );

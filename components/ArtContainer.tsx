@@ -1,4 +1,3 @@
-import Centrator from "../components/Centrator";
 import { artContainer } from "./styles.css";
 
 interface ArtProps {
